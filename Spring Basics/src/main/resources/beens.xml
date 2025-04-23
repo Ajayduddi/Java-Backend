@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="dev" class="com.learning.service.Dev">
+        <!--This property tag is used for setter injection-->
+        <property name="computer" ref="com2"/>
+    </bean>
+
+    <!--If we use autowiring we don't need to use property tag / constructor-args tag to insert dependencies-->
+    <bean id="dev2" class="com.learning.service.Dev" autowire="byType">
+        <!--This property tag is used for setter injection-->
+<!--        <property name="computer" ref="com"/>-->
+    </bean>
+
+    <!--For autowiring purpose we add primary attribute to the been tag-->
+    <bean id="com" class="com.learning.service.Laptop" primary="true">
+        <!--This constructor-args is used for passing constructor arguments-->
+        <constructor-arg index="0" value="intel i5 12th generation" />
+        <constructor-arg index="1" value="8GB" />
+        <constructor-arg index="2" value="512GB" />
+    </bean>
+
+    <bean id="com2" class="com.learning.service.Desktop">
+        <!--This constructor-args is used for passing constructor arguments-->
+        <constructor-arg index="0" value="intel i5 14th generation" />
+        <constructor-arg index="1" value="16GB" />
+        <constructor-arg index="2" value="1TB" />
+    </bean>
+</beans>
