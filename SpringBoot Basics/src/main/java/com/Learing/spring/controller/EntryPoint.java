@@ -3,6 +3,18 @@ package com.Learing.spring.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/*
+ *@RestController
+ *  - Purpose: This annotation is a specialized version of @Controller and is used in Spring MVC to create RESTful web services.
+ *  - Functionality: Combines @Controller and @ResponseBody. Every method in a class annotated with @RestController returns a domain
+ *    object (e.g., JSON, XML, or plain text) directly as the HTTP response body, rather than rendering a view.
+ *
+ * @GetMapping
+ *  - Purpose: This annotation is used to map HTTP GET requests to specific handler methods in a controller.
+ *  - Functionality: It is a shorthand for @RequestMapping(method = RequestMethod.GET).
+ *      Simplifies the mapping of GET requests to methods.
+ *      Can specify the URL path, headers, and parameters for the request.
+ */
 @RestController
 public class EntryPoint {
 

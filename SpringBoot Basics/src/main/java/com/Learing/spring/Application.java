@@ -25,7 +25,7 @@ public class Application {
 		 *  we know that in java every thing is work with classes and objects only.
 		 *  so, we need an object of the Dev class to use the build() method.
 		 *
-		 *	here below in the first line , you're manually creating an object fo the Dev class
+		 *	here below in the first line , you're manually creating an object of the Dev class
 		 *  you're fully responsible for managing that object.
 		 *  but the main objective of the spring framework is you don't have to manage the object. spring is do it for you
 		 */

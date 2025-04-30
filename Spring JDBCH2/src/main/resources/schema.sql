@@ -1,0 +1,1 @@
+create table products ( id int AUTO_INCREMENT primary key, name varchar(100), description varchar(255), price DOUBLE PRECISION);
