@@ -1,6 +1,6 @@
 package com.Learing.spring.model;
 
-import lombok.Data;
+//import lombok.Data;
 
 import java.util.Objects;
 
